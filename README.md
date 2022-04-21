@@ -21,7 +21,7 @@
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/laurent-kouassi/searchmovies.git
+   git clone https://github.com/laurent-kouassi/usersprofile.git
    ```
 2. Install NPM packages
    ```sh
