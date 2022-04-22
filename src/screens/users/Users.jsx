@@ -3,6 +3,7 @@ import { Profile } from '../../components/Profile'
 import { users } from '../../store/actions';
 import { useSelector, useDispatch } from "react-redux";
 import { Col, Row } from 'antd';
+import { Loader } from '../../components/Loader';
 
 export const Users = () => {
     // const [error, setError] = useState();
@@ -23,12 +24,14 @@ export const Users = () => {
   return (
     <div>
         <Row>
-         {   usersList.length &&
+         {   usersList.length > 0 ?
              usersList?.map((user, index) => (
                 <Col className="gutter-row" >
                   <Profile user = { user } />
                 </Col>
-            ))
+            )) :
+            <Loader />
+
          }
         </Row>
     </div>
